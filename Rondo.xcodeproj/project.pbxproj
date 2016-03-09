@@ -1,0 +1,756 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB044A641C0F4AE100392F07 /* Tour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB044A631C0F4AE100392F07 /* Tour.storyboard */; };
+		EB044A661C0F4B4E00392F07 /* Tshirts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB044A651C0F4B4E00392F07 /* Tshirts.storyboard */; };
+		EB044A681C0F4C2800392F07 /* TshirtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB044A671C0F4C2800392F07 /* TshirtViewController.swift */; };
+		EB044A6A1C0F4CE800392F07 /* TshirtContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB044A691C0F4CE800392F07 /* TshirtContentViewController.swift */; };
+		EB044A6C1C0F582400392F07 /* TshirtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB044A6B1C0F582400392F07 /* TshirtViewModel.swift */; };
+		EB044A6F1C0F5EA600392F07 /* SpainFirstDivision.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB044A6E1C0F5EA600392F07 /* SpainFirstDivision.plist */; };
+		EB044A711C0F631600392F07 /* Leagues.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB044A701C0F631600392F07 /* Leagues.plist */; };
+		EB1BE6931C21D0A400B9CEF8 /* fcbarcelona.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1BE6911C21D0A400B9CEF8 /* fcbarcelona.png */; };
+		EB1BE6941C21D0A400B9CEF8 /* fcbarcelona@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB1BE6921C21D0A400B9CEF8 /* fcbarcelona@2x.png */; };
+		EB1BE6961C21D53000B9CEF8 /* TestFirstDivision.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB1BE6951C21D53000B9CEF8 /* TestFirstDivision.plist */; };
+		EB1BE6981C21D54F00B9CEF8 /* LeaguesTest.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB1BE6971C21D54F00B9CEF8 /* LeaguesTest.plist */; };
+		EB1BE69C1C21D59600B9CEF8 /* Test2FirstDivision.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB1BE69B1C21D59600B9CEF8 /* Test2FirstDivision.plist */; };
+		EB3808DA1BA33F62004CEA83 /* blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3808D81BA33F62004CEA83 /* blue@2x.png */; };
+		EB3808DB1BA33F62004CEA83 /* blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3808D91BA33F62004CEA83 /* blue@3x.png */; };
+		EB47E9241BCDA60E005BAC87 /* fcbarcelona_main@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB47E9231BCDA60E005BAC87 /* fcbarcelona_main@2x.png */; };
+		EBDA48111BADBA4300C510BA /* TShirtsSpainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA48101BADBA4300C510BA /* TShirtsSpainViewController.swift */; };
+		EBDA48131BADE1E300C510BA /* fcbarcelona_main.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDA48121BADE1E300C510BA /* fcbarcelona_main.png */; };
+		EBE49B031C19E18A00AFE0A7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE49B021C19E18900AFE0A7 /* MenuViewController.swift */; };
+		EBE49B051C1F346A00AFE0A7 /* EnglandFirstDivision.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBE49B041C1F346A00AFE0A7 /* EnglandFirstDivision.plist */; };
+		EBE4FABE1B976B85009BFAEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4FABD1B976B85009BFAEB /* AppDelegate.swift */; };
+		EBE4FAC21B976B85009BFAEB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4FAC11B976B85009BFAEB /* GameScene.swift */; };
+		EBE4FAC41B976B85009BFAEB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4FAC31B976B85009BFAEB /* GameViewController.swift */; };
+		EBE4FAC71B976B85009BFAEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE4FAC51B976B85009BFAEB /* Main.storyboard */; };
+		EBE4FAC91B976B85009BFAEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE4FAC81B976B85009BFAEB /* Assets.xcassets */; };
+		EBE4FACC1B976B85009BFAEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE4FACA1B976B85009BFAEB /* LaunchScreen.storyboard */; };
+		EBE4FAD71B976B85009BFAEB /* RondoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4FAD61B976B85009BFAEB /* RondoTests.swift */; };
+		EBE4FAE21B976B85009BFAEB /* RondoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4FAE11B976B85009BFAEB /* RondoUITests.swift */; };
+		EBE7A18C1B9A02C70051AD04 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE7A18B1B9A02C70051AD04 /* red.png */; };
+		EBE7A18E1B9B61A10051AD04 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE7A18D1B9B61A10051AD04 /* blue.png */; };
+		EBE7A1901B9B63B30051AD04 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE7A18F1B9B63B30051AD04 /* ball.png */; };
+		EBEAF0A51BAC827300141A2F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEAF0A41BAC827300141A2F /* StoreKit.framework */; };
+		EBEAF0A81BAC872800141A2F /* TShirtsMenuStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBEAF0A71BAC872800141A2F /* TShirtsMenuStoryboard.storyboard */; };
+		F88B648E7C9E405981E9FC9E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7627DB2AA805EB23EF9A9D35 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBE4FAD31B976B85009BFAEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE4FAB21B976B84009BFAEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBE4FAB91B976B84009BFAEB;
+			remoteInfo = Rondo;
+		};
+		EBE4FADE1B976B85009BFAEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBE4FAB21B976B84009BFAEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBE4FAB91B976B84009BFAEB;
+			remoteInfo = Rondo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		58BBCD387C514BA1DE97A5B3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7627DB2AA805EB23EF9A9D35 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A24A3BF22C7FFC5DBBFB4ABA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EB044A631C0F4AE100392F07 /* Tour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tour.storyboard; sourceTree = "<group>"; };
+		EB044A651C0F4B4E00392F07 /* Tshirts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tshirts.storyboard; sourceTree = "<group>"; };
+		EB044A671C0F4C2800392F07 /* TshirtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TshirtViewController.swift; sourceTree = "<group>"; };
+		EB044A691C0F4CE800392F07 /* TshirtContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TshirtContentViewController.swift; sourceTree = "<group>"; };
+		EB044A6B1C0F582400392F07 /* TshirtViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TshirtViewModel.swift; sourceTree = "<group>"; };
+		EB044A6E1C0F5EA600392F07 /* SpainFirstDivision.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SpainFirstDivision.plist; sourceTree = "<group>"; };
+		EB044A701C0F631600392F07 /* Leagues.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Leagues.plist; sourceTree = "<group>"; };
+		EB1BE6911C21D0A400B9CEF8 /* fcbarcelona.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fcbarcelona.png; sourceTree = "<group>"; };
+		EB1BE6921C21D0A400B9CEF8 /* fcbarcelona@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fcbarcelona@2x.png"; sourceTree = "<group>"; };
+		EB1BE6951C21D53000B9CEF8 /* TestFirstDivision.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestFirstDivision.plist; sourceTree = "<group>"; };
+		EB1BE6971C21D54F00B9CEF8 /* LeaguesTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LeaguesTest.plist; sourceTree = "<group>"; };
+		EB1BE69B1C21D59600B9CEF8 /* Test2FirstDivision.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Test2FirstDivision.plist; sourceTree = "<group>"; };
+		EB3808D81BA33F62004CEA83 /* blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue@2x.png"; sourceTree = "<group>"; };
+		EB3808D91BA33F62004CEA83 /* blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue@3x.png"; sourceTree = "<group>"; };
+		EB47E9231BCDA60E005BAC87 /* fcbarcelona_main@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fcbarcelona_main@2x.png"; sourceTree = "<group>"; };
+		EBDA48101BADBA4300C510BA /* TShirtsSpainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TShirtsSpainViewController.swift; sourceTree = "<group>"; };
+		EBDA48121BADE1E300C510BA /* fcbarcelona_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fcbarcelona_main.png; sourceTree = "<group>"; };
+		EBE49B021C19E18900AFE0A7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		EBE49B041C1F346A00AFE0A7 /* EnglandFirstDivision.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EnglandFirstDivision.plist; sourceTree = "<group>"; };
+		EBE4FABA1B976B84009BFAEB /* Rondo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rondo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE4FABD1B976B85009BFAEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBE4FAC11B976B85009BFAEB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		EBE4FAC31B976B85009BFAEB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		EBE4FAC61B976B85009BFAEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBE4FAC81B976B85009BFAEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBE4FACB1B976B85009BFAEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBE4FACD1B976B85009BFAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE4FAD21B976B85009BFAEB /* RondoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RondoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE4FAD61B976B85009BFAEB /* RondoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RondoTests.swift; sourceTree = "<group>"; };
+		EBE4FAD81B976B85009BFAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE4FADD1B976B85009BFAEB /* RondoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RondoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE4FAE11B976B85009BFAEB /* RondoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RondoUITests.swift; sourceTree = "<group>"; };
+		EBE4FAE31B976B85009BFAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBE7A18B1B9A02C70051AD04 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		EBE7A18D1B9B61A10051AD04 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		EBE7A18F1B9B63B30051AD04 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		EBEAF0A41BAC827300141A2F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EBEAF0A71BAC872800141A2F /* TShirtsMenuStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TShirtsMenuStoryboard.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBE4FAB71B976B84009BFAEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88B648E7C9E405981E9FC9E /* libPods.a in Frameworks */,
+				EBEAF0A51BAC827300141A2F /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE4FACF1B976B85009BFAEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE4FADA1B976B85009BFAEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B702FC2140E52519AEE46AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBEAF0A41BAC827300141A2F /* StoreKit.framework */,
+				7627DB2AA805EB23EF9A9D35 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7AB83337D3DECD7EC0CD291 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58BBCD387C514BA1DE97A5B3 /* Pods.debug.xcconfig */,
+				A24A3BF22C7FFC5DBBFB4ABA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB044A5E1C0F480400392F07 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				EBE49B011C19E08900AFE0A7 /* Game */,
+				EBE49B001C19E08200AFE0A7 /* Menu */,
+				EB044A5F1C0F481000392F07 /* Tshirts */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		EB044A5F1C0F481000392F07 /* Tshirts */ = {
+			isa = PBXGroup;
+			children = (
+				EB044A601C0F493A00392F07 /* Model */,
+				EB044A611C0F494300392F07 /* View */,
+				EB044A651C0F4B4E00392F07 /* Tshirts.storyboard */,
+			);
+			name = Tshirts;
+			sourceTree = "<group>";
+		};
+		EB044A601C0F493A00392F07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB044A6B1C0F582400392F07 /* TshirtViewModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EB044A611C0F494300392F07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB044A671C0F4C2800392F07 /* TshirtViewController.swift */,
+				EB044A691C0F4CE800392F07 /* TshirtContentViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EB044A6D1C0F5E2700392F07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB1BE6951C21D53000B9CEF8 /* TestFirstDivision.plist */,
+				EB1BE69B1C21D59600B9CEF8 /* Test2FirstDivision.plist */,
+				EBE49B041C1F346A00AFE0A7 /* EnglandFirstDivision.plist */,
+				EB044A6E1C0F5EA600392F07 /* SpainFirstDivision.plist */,
+				EB1BE6971C21D54F00B9CEF8 /* LeaguesTest.plist */,
+				EB044A701C0F631600392F07 /* Leagues.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EBE49B001C19E08200AFE0A7 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				EBE49B021C19E18900AFE0A7 /* MenuViewController.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		EBE49B011C19E08900AFE0A7 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		EBE4FAB11B976B84009BFAEB = {
+			isa = PBXGroup;
+			children = (
+				EBE4FABC1B976B84009BFAEB /* Rondo */,
+				EBE4FAD51B976B85009BFAEB /* RondoTests */,
+				EBE4FAE01B976B85009BFAEB /* RondoUITests */,
+				EBE4FABB1B976B84009BFAEB /* Products */,
+				C7AB83337D3DECD7EC0CD291 /* Pods */,
+				4B702FC2140E52519AEE46AD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EBE4FABB1B976B84009BFAEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4FABA1B976B84009BFAEB /* Rondo.app */,
+				EBE4FAD21B976B85009BFAEB /* RondoTests.xctest */,
+				EBE4FADD1B976B85009BFAEB /* RondoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBE4FABC1B976B84009BFAEB /* Rondo */ = {
+			isa = PBXGroup;
+			children = (
+				EB044A6D1C0F5E2700392F07 /* Resources */,
+				EB044A5E1C0F480400392F07 /* Features */,
+				EBE7A18A1B9A02C70051AD04 /* Art */,
+				EBE4FABD1B976B85009BFAEB /* AppDelegate.swift */,
+				EBE4FAC11B976B85009BFAEB /* GameScene.swift */,
+				EBE4FAC31B976B85009BFAEB /* GameViewController.swift */,
+				EBE4FAC51B976B85009BFAEB /* Main.storyboard */,
+				EB044A631C0F4AE100392F07 /* Tour.storyboard */,
+				EBE4FAC81B976B85009BFAEB /* Assets.xcassets */,
+				EBE4FACA1B976B85009BFAEB /* LaunchScreen.storyboard */,
+				EBE4FACD1B976B85009BFAEB /* Info.plist */,
+				EBEAF0A71BAC872800141A2F /* TShirtsMenuStoryboard.storyboard */,
+				EBDA48101BADBA4300C510BA /* TShirtsSpainViewController.swift */,
+			);
+			path = Rondo;
+			sourceTree = "<group>";
+		};
+		EBE4FAD51B976B85009BFAEB /* RondoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4FAD61B976B85009BFAEB /* RondoTests.swift */,
+				EBE4FAD81B976B85009BFAEB /* Info.plist */,
+			);
+			path = RondoTests;
+			sourceTree = "<group>";
+		};
+		EBE4FAE01B976B85009BFAEB /* RondoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4FAE11B976B85009BFAEB /* RondoUITests.swift */,
+				EBE4FAE31B976B85009BFAEB /* Info.plist */,
+			);
+			path = RondoUITests;
+			sourceTree = "<group>";
+		};
+		EBE7A18A1B9A02C70051AD04 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				EB1BE6911C21D0A400B9CEF8 /* fcbarcelona.png */,
+				EB1BE6921C21D0A400B9CEF8 /* fcbarcelona@2x.png */,
+				EB47E9231BCDA60E005BAC87 /* fcbarcelona_main@2x.png */,
+				EBDA48121BADE1E300C510BA /* fcbarcelona_main.png */,
+				EB3808D81BA33F62004CEA83 /* blue@2x.png */,
+				EB3808D91BA33F62004CEA83 /* blue@3x.png */,
+				EBE7A18F1B9B63B30051AD04 /* ball.png */,
+				EBE7A18D1B9B61A10051AD04 /* blue.png */,
+				EBE7A18B1B9A02C70051AD04 /* red.png */,
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBE4FAB91B976B84009BFAEB /* Rondo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE4FAE61B976B85009BFAEB /* Build configuration list for PBXNativeTarget "Rondo" */;
+			buildPhases = (
+				7D8DA48E9168EF2F2D928B76 /* Check Pods Manifest.lock */,
+				EBE4FAB61B976B84009BFAEB /* Sources */,
+				EBE4FAB71B976B84009BFAEB /* Frameworks */,
+				EBE4FAB81B976B84009BFAEB /* Resources */,
+				21AD87AAE148ECB1F81DF3BC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rondo;
+			productName = Rondo;
+			productReference = EBE4FABA1B976B84009BFAEB /* Rondo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBE4FAD11B976B85009BFAEB /* RondoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE4FAE91B976B85009BFAEB /* Build configuration list for PBXNativeTarget "RondoTests" */;
+			buildPhases = (
+				EBE4FACE1B976B85009BFAEB /* Sources */,
+				EBE4FACF1B976B85009BFAEB /* Frameworks */,
+				EBE4FAD01B976B85009BFAEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBE4FAD41B976B85009BFAEB /* PBXTargetDependency */,
+			);
+			name = RondoTests;
+			productName = RondoTests;
+			productReference = EBE4FAD21B976B85009BFAEB /* RondoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EBE4FADC1B976B85009BFAEB /* RondoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE4FAEC1B976B85009BFAEB /* Build configuration list for PBXNativeTarget "RondoUITests" */;
+			buildPhases = (
+				EBE4FAD91B976B85009BFAEB /* Sources */,
+				EBE4FADA1B976B85009BFAEB /* Frameworks */,
+				EBE4FADB1B976B85009BFAEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBE4FADF1B976B85009BFAEB /* PBXTargetDependency */,
+			);
+			name = RondoUITests;
+			productName = RondoUITests;
+			productReference = EBE4FADD1B976B85009BFAEB /* RondoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBE4FAB21B976B84009BFAEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Insane Platypus Games";
+				TargetAttributes = {
+					EBE4FAB91B976B84009BFAEB = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = WCKPXB57CT;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
+					};
+					EBE4FAD11B976B85009BFAEB = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = EBE4FAB91B976B84009BFAEB;
+					};
+					EBE4FADC1B976B85009BFAEB = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = EBE4FAB91B976B84009BFAEB;
+					};
+				};
+			};
+			buildConfigurationList = EBE4FAB51B976B84009BFAEB /* Build configuration list for PBXProject "Rondo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBE4FAB11B976B84009BFAEB;
+			productRefGroup = EBE4FABB1B976B84009BFAEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBE4FAB91B976B84009BFAEB /* Rondo */,
+				EBE4FAD11B976B85009BFAEB /* RondoTests */,
+				EBE4FADC1B976B85009BFAEB /* RondoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBE4FAB81B976B84009BFAEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBEAF0A81BAC872800141A2F /* TShirtsMenuStoryboard.storyboard in Resources */,
+				EB1BE69C1C21D59600B9CEF8 /* Test2FirstDivision.plist in Resources */,
+				EB47E9241BCDA60E005BAC87 /* fcbarcelona_main@2x.png in Resources */,
+				EB3808DA1BA33F62004CEA83 /* blue@2x.png in Resources */,
+				EB1BE6961C21D53000B9CEF8 /* TestFirstDivision.plist in Resources */,
+				EB3808DB1BA33F62004CEA83 /* blue@3x.png in Resources */,
+				EBE4FACC1B976B85009BFAEB /* LaunchScreen.storyboard in Resources */,
+				EB1BE6931C21D0A400B9CEF8 /* fcbarcelona.png in Resources */,
+				EBE7A18E1B9B61A10051AD04 /* blue.png in Resources */,
+				EB044A661C0F4B4E00392F07 /* Tshirts.storyboard in Resources */,
+				EB044A6F1C0F5EA600392F07 /* SpainFirstDivision.plist in Resources */,
+				EBE7A1901B9B63B30051AD04 /* ball.png in Resources */,
+				EB044A711C0F631600392F07 /* Leagues.plist in Resources */,
+				EB1BE6941C21D0A400B9CEF8 /* fcbarcelona@2x.png in Resources */,
+				EBE49B051C1F346A00AFE0A7 /* EnglandFirstDivision.plist in Resources */,
+				EBE7A18C1B9A02C70051AD04 /* red.png in Resources */,
+				EB044A641C0F4AE100392F07 /* Tour.storyboard in Resources */,
+				EBDA48131BADE1E300C510BA /* fcbarcelona_main.png in Resources */,
+				EB1BE6981C21D54F00B9CEF8 /* LeaguesTest.plist in Resources */,
+				EBE4FAC91B976B85009BFAEB /* Assets.xcassets in Resources */,
+				EBE4FAC71B976B85009BFAEB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE4FAD01B976B85009BFAEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE4FADB1B976B85009BFAEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21AD87AAE148ECB1F81DF3BC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D8DA48E9168EF2F2D928B76 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBE4FAB61B976B84009BFAEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB044A6C1C0F582400392F07 /* TshirtViewModel.swift in Sources */,
+				EB044A6A1C0F4CE800392F07 /* TshirtContentViewController.swift in Sources */,
+				EBE4FAC21B976B85009BFAEB /* GameScene.swift in Sources */,
+				EB044A681C0F4C2800392F07 /* TshirtViewController.swift in Sources */,
+				EBE4FAC41B976B85009BFAEB /* GameViewController.swift in Sources */,
+				EBE4FABE1B976B85009BFAEB /* AppDelegate.swift in Sources */,
+				EBDA48111BADBA4300C510BA /* TShirtsSpainViewController.swift in Sources */,
+				EBE49B031C19E18A00AFE0A7 /* MenuViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE4FACE1B976B85009BFAEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE4FAD71B976B85009BFAEB /* RondoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBE4FAD91B976B85009BFAEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE4FAE21B976B85009BFAEB /* RondoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBE4FAD41B976B85009BFAEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBE4FAB91B976B84009BFAEB /* Rondo */;
+			targetProxy = EBE4FAD31B976B85009BFAEB /* PBXContainerItemProxy */;
+		};
+		EBE4FADF1B976B85009BFAEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBE4FAB91B976B84009BFAEB /* Rondo */;
+			targetProxy = EBE4FADE1B976B85009BFAEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBE4FAC51B976B85009BFAEB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE4FAC61B976B85009BFAEB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBE4FACA1B976B85009BFAEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBE4FACB1B976B85009BFAEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBE4FAE41B976B85009BFAEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EBE4FAE51B976B85009BFAEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBE4FAE71B976B85009BFAEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58BBCD387C514BA1DE97A5B3 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Rondo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.insaneplatypusgames.Rondo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		EBE4FAE81B976B85009BFAEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A24A3BF22C7FFC5DBBFB4ABA /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Rondo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.insaneplatypusgames.Rondo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		EBE4FAEA1B976B85009BFAEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = RondoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.insaneplatypusgames.RondoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rondo.app/Rondo";
+			};
+			name = Debug;
+		};
+		EBE4FAEB1B976B85009BFAEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RondoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.insaneplatypusgames.RondoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rondo.app/Rondo";
+			};
+			name = Release;
+		};
+		EBE4FAED1B976B85009BFAEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = RondoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.insaneplatypusgames.RondoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Rondo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EBE4FAEE1B976B85009BFAEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RondoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.insaneplatypusgames.RondoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Rondo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBE4FAB51B976B84009BFAEB /* Build configuration list for PBXProject "Rondo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE4FAE41B976B85009BFAEB /* Debug */,
+				EBE4FAE51B976B85009BFAEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE4FAE61B976B85009BFAEB /* Build configuration list for PBXNativeTarget "Rondo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE4FAE71B976B85009BFAEB /* Debug */,
+				EBE4FAE81B976B85009BFAEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE4FAE91B976B85009BFAEB /* Build configuration list for PBXNativeTarget "RondoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE4FAEA1B976B85009BFAEB /* Debug */,
+				EBE4FAEB1B976B85009BFAEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE4FAEC1B976B85009BFAEB /* Build configuration list for PBXNativeTarget "RondoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE4FAED1B976B85009BFAEB /* Debug */,
+				EBE4FAEE1B976B85009BFAEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBE4FAB21B976B84009BFAEB /* Project object */;
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AthleticBilbao</key>
+	<string>athleticBilbao.png</string>
+	<key>AtleticoMadrid</key>
+	<string>atlelicMadrid.png</string>
+	<key>FCBarcelona</key>
+	<string>fcBarcelona.png</string>
+	<key>Betis</key>
+	<string>betis.png</string>
+	<key>Celta</key>
+	<string>celta.png</string>
+	<key>DeportivoCoruña</key>
+	<string>deportivoCoruña.png</string>
+	<key>Eibar</key>
+	<string>eibar.png</string>
+	<key>Espanyol</key>
+	<string>espanyol.png</string>
+	<key>Getafe</key>
+	<string>getafe.png</string>
+	<key>Granada</key>
+	<string>granada.png</string>
+	<key>LasPalmas</key>
+	<string>lasPalmas.png</string>
+	<key>Levante</key>
+	<string>levante.png</string>
+	<key>Malaga</key>
+	<string>malaga.png</string>
+	<key>RayoVallecano</key>
+	<string>rayoVallecano.png</string>
+	<key>RealMadrid</key>
+	<string>realMadrid.png</string>
+	<key>RealSociedad</key>
+	<string>realSociedad.png</string>
+	<key>Sevilla</key>
+	<string>sevilla.png</string>
+	<key>SportingGijon</key>
+	<string>sportingGijon.png</string>
+	<key>Valencia</key>
+	<string>valencia.png</string>
+	<key>Villareal</key>
+	<string>villareal.png</string>
+</dict>
+</plist>
