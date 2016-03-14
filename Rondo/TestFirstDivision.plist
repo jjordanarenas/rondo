@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AthleticBilbao</key>
-	<string>fcBarcelona.png</string>
+	<string>fcbarcelona</string>
 	<key>AtleticoMadrid</key>
-	<string>fcBarcelona.png</string>
+	<string>fcbarcelona</string>
 	<key>FCBarcelona</key>
 	<string>fcBarcelona.png</string>
 	<key>Betis</key>

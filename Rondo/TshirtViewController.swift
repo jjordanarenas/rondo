@@ -30,8 +30,7 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
     
     private var MAX_NUM_PAGES = 0
     
-    var containerView = UIView!()
-    
+  
     var buttonWidth: CGFloat = 0.0
     var buttonHeight: CGFloat = 0.0
     
@@ -162,12 +161,8 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
             self.initializeAuxVariables()
             self.initializeTShirtsView()
 
-            
-            scrollView.addSubview(containerView)
-            
             self.view.addSubview(scrollView)
-            
-            
+          
             
             pages.append(pageContentViewController!)
         }
@@ -207,11 +202,12 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
         pageControl.numberOfPages = MAX_NUM_PAGES
 //        
         pageControl.tintColor = UIColor.yellowColor()
-      
+      pageControl.sizeThatFits(view!.bounds.size)
         self.addChildViewController(pageViewController)
         self.view.insertSubview(pageViewController.view, atIndex: 1)
         
         pageViewController.didMoveToParentViewController(self)
+     
     }
     
     @IBAction func skipButtonAction(sender: AnyObject) {
@@ -276,37 +272,27 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
 //        buttonWidth = auxButton.frame.width
 //        buttonHeight = auxButton.frame.height
         
-        print("\nimage width: \(buttonWidth) image height: \(buttonHeight)")
-        
-        print("\nhorizontalGap: \(horizontalGap)\nverticalGap: \(verticalGap)\n")
-        
+        //print("\nimage width: \(buttonWidth) image height: \(buttonHeight)")
+        //print("\nhorizontalGap: \(horizontalGap)\nverticalGap: \(verticalGap)\n")
         
         scrollView = UIScrollView()
         scrollView.delegate = self
-        print("HEIGHT: \(view.frame.size.height) WIDTH: \(view.frame.size.width)")
+        //print("HEIGHT: \(view.frame.size.height) WIDTH: \(view.frame.size.width)")
         scrollView.frame = view.frame
         scrollView.contentSize.width = view.frame.size.width
-        scrollView.contentSize.height = view.frame.size.height + buttonHeight
-      //scrollView.frame.size.width = view.frame.size.width
-      //scrollView.frame.size.height = view.frame.size.height + buttonHeight
-      //scrollView.frame.origin = CGPoint(x: 40/2, y: 0)
-        scrollView.backgroundColor = UIColor.greenColor()
-        containerView = UIView()
+        scrollView.contentSize.height = view.frame.size.height + 2 * buttonHeight
+        scrollView.backgroundColor = UIColor.blackColor()
       
-      
-
+ 
         //pageViewController.view.tintColor = UIColor.greenColor()
     }
     
     func initializeTShirtsView() {
-        //        var xPosition: CGFloat = 0.0
-        var xPosition: CGFloat = 0.0//scrollView.frame.origin.x
-        //        var yPosition: CGFloat = 0.0
-        var yPosition: CGFloat = 0.0//scrollView.frame.origin.y
+        var xPosition: CGFloat = 0.0
+        var yPosition: CGFloat = 0.0
         
         var countTshirts = 0
-        //var button: UIButton!
-        
+      
         for row in 0..<k_NUM_ROWS {
             if row == 0 {
                 yPosition += 0.5 * verticalGap
@@ -326,10 +312,10 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
                 if countTshirts >= pageContentViewController!.viewModel.arrayTshirts.count {
                     break
                 }
-                print("ROW: \(row) COLUMN: \(column)")
-                print("POSITION X: \(xPosition)\nPOSITION Y: \(yPosition)")
+                //print("ROW: \(row) COLUMN: \(column)")
+                //print("POSITION X: \(xPosition)\nPOSITION Y: \(yPosition)")
                 
-                let button = UIButton(type:UIButtonType.System) // as UIButton
+                let button = UIButton(frame: CGRectMake(xPosition, yPosition, buttonWidth, buttonHeight)) // as UIButton
                 //    button.setImage(UIImage(contentsOfFile: "fcbarcelona_main"), forState: UIControlState.Normal)
                 // pageContentViewController!.viewModel.
                 //button.setImage(UIImage(named: "fcbarcelona_main"), forState: UIControlState.Normal)
@@ -337,23 +323,25 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
                 
                 let tshirtName =  pageContentViewController!.viewModel.arrayTshirts[countTshirts] as String
                 button.setImage(UIImage(named: tshirtName), forState: UIControlState.Normal)
-                
-                button.frame = CGRectMake(xPosition, yPosition, buttonWidth, buttonHeight)
-                /////buttonOne.backgroundColor = UIColor.greenColor()
+                button.titleLabel!.text = "button on row: \(row) column: \(column)"
                 button.setTitle("button on row: \(row) column: \(column)", forState: UIControlState.Normal)
                 
                 button.tag = countTshirts
                 button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
                 
                 
-                
-                containerView.addSubview(button)
+                button.tintColor = UIColor.redColor()
+              
+              
+             scrollView.addSubview(button)
+              
                 countTshirts++
                 
             }
         }
-        
-        
+        pageControl.frame = CGRectMake(view.frame.size.width/2 - buttonWidth/2, yPosition + 0.25 * verticalGap, buttonWidth, buttonHeight)
+        scrollView.addSubview(pageControl)
+      //pageViewController.view.addSubview(pageControl)
     }
     
     func buttonAction(sender:UIButton) {
