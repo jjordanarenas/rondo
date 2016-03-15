@@ -64,8 +64,9 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initializeSwipeGestures()
-        
+        //initializeSwipeGestures()
+      
+      
         //self.scrollView.delegate = self
 //        print("HEIGHT: \(self.view.frame.size.height) WIDTH: \(self.view.frame.size.width)")
 //        self.scrollView.frame = self.view.frame
@@ -92,16 +93,18 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
   func handleSwipes(sender:UISwipeGestureRecognizer) {
     if (sender.direction == .Left) {
       print("Swipe Left")
-      if currentIndex > 0 {
-        viewControllerAtIndex(currentIndex - 1)
+      if currentIndex < MAX_NUM_PAGES - 1 {
+        viewControllerAtIndex(currentIndex + 1)
       }
     }
     
     if (sender.direction == .Right) {
       print("Swipe Right")
-      if currentIndex < MAX_NUM_PAGES - 1 {
-        viewControllerAtIndex(currentIndex + 1)
+      if currentIndex > 0 {
+        viewControllerAtIndex(currentIndex - 1)
+        
       }
+      
     }
   }
     override func didReceiveMemoryWarning() {
@@ -188,24 +191,33 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
             print(arrayFileNames.count)
         }
 
-        // TODO Initialize MAX_NUM_PAGES variable from plist
-        //MAX_NUM_PAGES =
-        
       
       pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TshirtViewController") as! UIPageViewController
-//        pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("TshirtViewController") as! UIPageViewController
         pageViewController.dataSource = self
         pageViewController.delegate = self
+      
         MAX_NUM_PAGES = arrayFileNames.count
 
+      
+      pageViewController.view.frame = view!.bounds
+      
+      
+
+        
+      
+      
+      
           pageControl = UIPageControl()
         pageControl.numberOfPages = MAX_NUM_PAGES
-//        
-        pageControl.tintColor = UIColor.yellowColor()
+      
+        pageControl.tintColor = UIColor.greenColor()
+      pageControl.pageIndicatorTintColor = UIColor.grayColor()
+      pageControl.currentPageIndicatorTintColor = UIColor.redColor()
+      
       pageControl.sizeThatFits(view!.bounds.size)
-        self.addChildViewController(pageViewController)
-        self.view.insertSubview(pageViewController.view, atIndex: 1)
-        
+        addChildViewController(pageViewController)
+        //view.insertSubview(pageViewController.view, atIndex: 1)
+        view.addSubview(pageViewController.view)
         pageViewController.didMoveToParentViewController(self)
      
     }
@@ -277,14 +289,14 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
         
         scrollView = UIScrollView()
         scrollView.delegate = self
-        //print("HEIGHT: \(view.frame.size.height) WIDTH: \(view.frame.size.width)")
-        scrollView.frame = view.frame
-        scrollView.contentSize.width = view.frame.size.width
-        scrollView.contentSize.height = view.frame.size.height + 2 * buttonHeight
-        scrollView.backgroundColor = UIColor.blackColor()
+        scrollView.frame = CGRectMake(view!.bounds.origin.x + buttonWidth/2, view!.bounds.origin.y + 3*buttonWidth, view!.bounds.width - buttonWidth, view!.bounds.height - 4*buttonWidth)
       
- 
-        //pageViewController.view.tintColor = UIColor.greenColor()
+      scrollView.contentSize.width = scrollView.frame.size.width
+      scrollView.contentSize.height = CGFloat(k_NUM_ROWS - 1) * verticalGap/4 + CGFloat(k_NUM_ROWS) * buttonHeight + verticalGap
+        scrollView.backgroundColor = UIColor.blueColor()
+      
+      
+        pageViewController.view.backgroundColor = UIColor.greenColor()
     }
     
     func initializeTShirtsView() {
@@ -297,14 +309,14 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
             if row == 0 {
                 yPosition += 0.5 * verticalGap
             } else {
-                yPosition += 0.5 * verticalGap
+                yPosition += verticalGap
             }
             
             xPosition = 0.0
             
             for column in 0..<k_NUM_COLUMNS {
                 if column == 0 {
-                    xPosition += 2 * horizontalGap
+                    xPosition += horizontalGap
                 } else {
                     xPosition += 3 * horizontalGap
                 }
@@ -323,7 +335,6 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
                 
                 let tshirtName =  pageContentViewController!.viewModel.arrayTshirts[countTshirts] as String
                 button.setImage(UIImage(named: tshirtName), forState: UIControlState.Normal)
-                button.titleLabel!.text = "button on row: \(row) column: \(column)"
                 button.setTitle("button on row: \(row) column: \(column)", forState: UIControlState.Normal)
                 
                 button.tag = countTshirts
@@ -340,8 +351,9 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
             }
         }
         pageControl.frame = CGRectMake(view.frame.size.width/2 - buttonWidth/2, yPosition + 0.25 * verticalGap, buttonWidth, buttonHeight)
-        scrollView.addSubview(pageControl)
-      //pageViewController.view.addSubview(pageControl)
+        //scrollView.addSubview(pageControl)
+       pageViewController.view.addSubview(pageControl)
+      
     }
     
     func buttonAction(sender:UIButton) {

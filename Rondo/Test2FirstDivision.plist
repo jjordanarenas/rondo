@@ -3,25 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>AthleticBilbao</key>
-	<string>fcBarcelona.png</string>
+	<string>valenciacf</string>
 	<key>AtleticoMadrid</key>
-	<string>fcBarcelona.png</string>
+	<string>valenciacf</string>
 	<key>FCBarcelona</key>
-	<string>fcBarcelona.png</string>
+	<string>valenciacf</string>
 	<key>Betis</key>
 	<string>fcBarcelona.png</string>
 	<key>Celta</key>
-	<string>fcBarcelona.png</string>
+	<string>valenciacf</string>
 	<key>DeportivoCoruña</key>
 	<string>fcBarcelona.png</string>
 	<key>Eibar</key>
-	<string>fcBarcelona.png</string>
+	<string>valenciacf</string>
 	<key>Espanyol</key>
 	<string>fcBarcelona.png</string>
 	<key>Getafe</key>
 	<string>fcBarcelona.png</string>
 	<key>Granada</key>
-	<string>fcBarcelona.png</string>
+	<string>valenciacf</string>
 	<key>LasPalmas</key>
 	<string>fcBarcelona.png</string>
 	<key>Levante</key>
@@ -29,20 +29,18 @@
 	<key>Malaga</key>
 	<string>fcBarcelona.png</string>
 	<key>RayoVallecano</key>
-	<string>fcBarcelona.png</string>
+	<string>valenciacf</string>
 	<key>RealMadrid</key>
 	<string>fcBarcelona.png</string>
 	<key>RealSociedad</key>
-	<string>fcBarcelona.png</string>
+	<string>valenciacf</string>
 	<key>Sevilla</key>
 	<string>fcBarcelona.png</string>
 	<key>SportingGijon</key>
-	<string>fcBarcelona.png</string>
+	<string>valenciacf</string>
 	<key>Valencia</key>
 	<string>fcBarcelona.png</string>
 	<key>Villareal</key>
-	<string>fcBarcelona.png</string>
-	<key>Villareal - 2</key>
-	<string>fcBarcelona.png</string>
+	<string>valenciacf</string>
 </dict>
 </plist>

@@ -22,6 +22,8 @@
 		EB3808DA1BA33F62004CEA83 /* blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3808D81BA33F62004CEA83 /* blue@2x.png */; };
 		EB3808DB1BA33F62004CEA83 /* blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3808D91BA33F62004CEA83 /* blue@3x.png */; };
 		EB47E9241BCDA60E005BAC87 /* fcbarcelona_main@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB47E9231BCDA60E005BAC87 /* fcbarcelona_main@2x.png */; };
+		EB4DEA741C972DC400C549D4 /* realmadrid.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4DEA731C972DC400C549D4 /* realmadrid.png */; };
+		EB4DEA761C972F4D00C549D4 /* valenciacf.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4DEA751C972F4D00C549D4 /* valenciacf.png */; };
 		EBDA48111BADBA4300C510BA /* TShirtsSpainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA48101BADBA4300C510BA /* TShirtsSpainViewController.swift */; };
 		EBDA48131BADE1E300C510BA /* fcbarcelona_main.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDA48121BADE1E300C510BA /* fcbarcelona_main.png */; };
 		EBE49B031C19E18A00AFE0A7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE49B021C19E18900AFE0A7 /* MenuViewController.swift */; };
@@ -78,6 +80,8 @@
 		EB3808D81BA33F62004CEA83 /* blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue@2x.png"; sourceTree = "<group>"; };
 		EB3808D91BA33F62004CEA83 /* blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue@3x.png"; sourceTree = "<group>"; };
 		EB47E9231BCDA60E005BAC87 /* fcbarcelona_main@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fcbarcelona_main@2x.png"; sourceTree = "<group>"; };
+		EB4DEA731C972DC400C549D4 /* realmadrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realmadrid.png; sourceTree = "<group>"; };
+		EB4DEA751C972F4D00C549D4 /* valenciacf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valenciacf.png; sourceTree = "<group>"; };
 		EBDA48101BADBA4300C510BA /* TShirtsSpainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TShirtsSpainViewController.swift; sourceTree = "<group>"; };
 		EBDA48121BADE1E300C510BA /* fcbarcelona_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fcbarcelona_main.png; sourceTree = "<group>"; };
 		EBE49B021C19E18900AFE0A7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 		EBE7A18A1B9A02C70051AD04 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				EB4DEA751C972F4D00C549D4 /* valenciacf.png */,
+				EB4DEA731C972DC400C549D4 /* realmadrid.png */,
 				EB1BE6911C21D0A400B9CEF8 /* fcbarcelona.png */,
 				EB1BE6921C21D0A400B9CEF8 /* fcbarcelona@2x.png */,
 				EB47E9231BCDA60E005BAC87 /* fcbarcelona_main@2x.png */,
@@ -402,10 +408,12 @@
 			files = (
 				EBEAF0A81BAC872800141A2F /* TShirtsMenuStoryboard.storyboard in Resources */,
 				EB1BE69C1C21D59600B9CEF8 /* Test2FirstDivision.plist in Resources */,
+				EB4DEA741C972DC400C549D4 /* realmadrid.png in Resources */,
 				EB47E9241BCDA60E005BAC87 /* fcbarcelona_main@2x.png in Resources */,
 				EB3808DA1BA33F62004CEA83 /* blue@2x.png in Resources */,
 				EB1BE6961C21D53000B9CEF8 /* TestFirstDivision.plist in Resources */,
 				EB3808DB1BA33F62004CEA83 /* blue@3x.png in Resources */,
+				EB4DEA761C972F4D00C549D4 /* valenciacf.png in Resources */,
 				EBE4FACC1B976B85009BFAEB /* LaunchScreen.storyboard in Resources */,
 				EB1BE6931C21D0A400B9CEF8 /* fcbarcelona.png in Resources */,
 				EBE7A18E1B9B61A10051AD04 /* blue.png in Resources */,

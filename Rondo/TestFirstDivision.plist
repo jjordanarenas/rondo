@@ -5,44 +5,72 @@
 	<key>AthleticBilbao</key>
 	<string>fcbarcelona</string>
 	<key>AtleticoMadrid</key>
-	<string>fcbarcelona</string>
+	<string>realmadrid</string>
 	<key>FCBarcelona</key>
-	<string>fcBarcelona.png</string>
+	<string>fcBarcelona</string>
 	<key>Betis</key>
-	<string>fcBarcelona.png</string>
+	<string>realmadrid</string>
 	<key>Celta</key>
 	<string>fcBarcelona.png</string>
 	<key>DeportivoCoruña</key>
-	<string>fcBarcelona.png</string>
+	<string>realmadrid</string>
 	<key>Eibar</key>
 	<string>fcBarcelona.png</string>
 	<key>Espanyol</key>
-	<string>fcBarcelona.png</string>
+	<string>realmadrid</string>
 	<key>Getafe</key>
 	<string>fcBarcelona.png</string>
 	<key>Granada</key>
-	<string>fcBarcelona.png</string>
+	<string>realmadrid</string>
 	<key>LasPalmas</key>
 	<string>fcBarcelona.png</string>
 	<key>Levante</key>
-	<string>fcBarcelona.png</string>
+	<string>realmadrid</string>
 	<key>Malaga</key>
 	<string>fcBarcelona.png</string>
 	<key>RayoVallecano</key>
-	<string>fcBarcelona.png</string>
+	<string>realmadrid</string>
 	<key>RealMadrid</key>
 	<string>fcBarcelona.png</string>
 	<key>RealSociedad</key>
-	<string>fcBarcelona.png</string>
+	<string>realmadrid</string>
 	<key>Sevilla</key>
 	<string>fcBarcelona.png</string>
 	<key>Villareal - 2</key>
-	<string>fcBarcelona.png</string>
+	<string>realmadrid</string>
 	<key>SportingGijon</key>
 	<string>fcBarcelona.png</string>
 	<key>Valencia</key>
-	<string>fcBarcelona.png</string>
+	<string>realmadrid</string>
 	<key>Villareal</key>
+	<string>fcBarcelona.png</string>
+	<key>New item</key>
+	<string>fcBarcelona.png</string>
+	<key>Villareal - 8</key>
+	<string>fcBarcelona.png</string>
+	<key>Villareal - 7</key>
+	<string>fcBarcelona.png</string>
+	<key>Villareal - 6</key>
+	<string>fcBarcelona.png</string>
+	<key>Villareal - 5</key>
+	<string>fcBarcelona.png</string>
+	<key>Villareal - 3</key>
+	<string>fcBarcelona.png</string>
+	<key>Valencia - 2</key>
+	<string>realmadrid</string>
+	<key>New item - 2</key>
+	<string>fcBarcelona.png</string>
+	<key>Villareal - 4</key>
+	<string>fcBarcelona.png</string>
+	<key>Valencia - 3</key>
+	<string>realmadrid</string>
+	<key>New item - 3</key>
+	<string>fcBarcelona.png</string>
+	<key>New item - 4</key>
+	<string>fcBarcelona.png</string>
+	<key>Valencia - 4</key>
+	<string>realmadrid</string>
+	<key>New item - 5</key>
 	<string>fcBarcelona.png</string>
 </dict>
 </plist>
