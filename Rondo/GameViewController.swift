@@ -8,7 +8,6 @@
 
 import UIKit
 import SpriteKit
-//import GoogleMobileAds
 
 class GameViewController: UIViewController {
 
@@ -18,13 +17,14 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let scene = GameScene(size: view.bounds.size)
+        let scene = MainMenuScene(size: view.bounds.size)
 
         // Linking view controller and scene to show ads
         scene.viewController = self
         
         // Configure the view.
         let skView = self.view as! SKView
+      
         skView.showsFPS = true
         skView.showsNodeCount = true
             

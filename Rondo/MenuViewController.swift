@@ -12,6 +12,12 @@ import UIKit
 class MenuViewController: UIViewController {
     //var pageViewController: UIPageViewController!
     
+  @IBOutlet weak var backButton: UIButton!
+  
+  @IBAction func closeMenu(sender: AnyObject) {
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+  
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }

@@ -255,7 +255,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "329"
             endingLineNumber = "329"
-            landmarkName = "initializePlayableCharacters()"
+            landmarkName = "initializeDistances()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -335,7 +335,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "693"
             endingLineNumber = "693"
-            landmarkName = "initializeLabels()"
+            landmarkName = "updateSpeeds()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -431,7 +431,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "711"
             endingLineNumber = "711"
-            landmarkName = "initializeCollisionDetection()"
+            landmarkName = "initializeLabels()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -447,7 +447,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "155"
             endingLineNumber = "155"
-            landmarkName = "touchesBegan(_:withEvent:)"
+            landmarkName = "didMoveToView(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -495,7 +495,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "709"
             endingLineNumber = "709"
-            landmarkName = "initializeCollisionDetection()"
+            landmarkName = "initializeLabels()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -623,8 +623,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "807"
             endingLineNumber = "807"
-            landmarkName = "checkPassCut()"
-            landmarkType = "5">
+            landmarkName = "GameScene"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

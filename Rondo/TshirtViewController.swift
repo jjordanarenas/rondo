@@ -36,7 +36,6 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
     
     var viewWidth: CGFloat = 0.0
  
-  //@IBOutlet weak var scrollView: UIScrollView!
     var scrollView: UIScrollView!
     var viewHeight: CGFloat = 0.0
     var horizontalGap: CGFloat = 0.0
@@ -50,7 +49,6 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
     
     @IBOutlet weak var skipButton: UIButton!
     
-    //@IBOutlet weak var pageControl: UIPageControl!
     var pageControl: UIPageControl!
   
   
@@ -66,16 +64,7 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
         
         //initializeSwipeGestures()
       
-      
-        //self.scrollView.delegate = self
-//        print("HEIGHT: \(self.view.frame.size.height) WIDTH: \(self.view.frame.size.width)")
-//        self.scrollView.frame = self.view.frame
-//        self.scrollView.contentSize.width = self.view.frame.size.width
-//        self.scrollView.contentSize.height = self.view.frame.size.height + 150
-//        
-//        containerView = UIView()
-        
-      //  initializePageViewController()
+
     }
   
   func initializeSwipeGestures() {
@@ -112,14 +101,21 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = (viewController as? TshirtContentViewController)?.pageIndex
-            where currentIndex < arrayTshirtNames.count - 1 else { return nil }
+//        guard let currentIndex = (viewController as? TshirtContentViewController)?.pageIndex
+//            where currentIndex < arrayTshirtNames.count - 1 else { return nil }
+      guard let currentIndex = (viewController as? TshirtContentViewController)?.pageIndex
+        where currentIndex < arrayFileNames.count - 1 else { return nil }
+      
+      
+      
         return viewControllerAtIndex(currentIndex + 1)
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = (viewController as? TshirtContentViewController)?.pageIndex
-            where currentIndex > 0 else { return nil }
+//        guard let currentIndex = (viewController as? TshirtContentViewController)?.pageIndex
+//            where currentIndex > 0 else { return nil }
+      guard let currentIndex = (viewController as? TshirtContentViewController)?.pageIndex
+        where currentIndex > 0 else { return nil }
         return viewControllerAtIndex(currentIndex - 1)
     }
     
@@ -350,9 +346,10 @@ class TshirtViewController: UIPageViewController, UIPageViewControllerDataSource
                 
             }
         }
-        pageControl.frame = CGRectMake(view.frame.size.width/2 - buttonWidth/2, yPosition + 0.25 * verticalGap, buttonWidth, buttonHeight)
-        //scrollView.addSubview(pageControl)
-       pageViewController.view.addSubview(pageControl)
+        //pageControl.frame = CGRectMake(view.frame.size.width/2 - buttonWidth/2, yPosition + 0.25 * verticalGap, buttonWidth, buttonHeight)
+      pageControl.frame = CGRectMake(view.frame.size.width/2, view.frame.size.height, buttonWidth, buttonHeight)
+       // scrollView.addSubview(pageControl)
+       scrollView.addSubview(pageControl)
       
     }
     

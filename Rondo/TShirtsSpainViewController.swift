@@ -52,17 +52,17 @@ class TShirtsSpainViewController: UIViewController, UIScrollViewDelegate {
         
         buttonOne.addTarget(self, action: "buttonAction1x1:", forControlEvents: UIControlEvents.TouchUpInside)*/
         
-        self.scrollView = UIScrollView()
-        self.scrollView.delegate = self
-        self.scrollView.contentSize = CGSizeMake(1000, 1000)
+        scrollView = UIScrollView()
+        scrollView.delegate = self
+        scrollView.contentSize = CGSizeMake(1000, 1000)
         
         containerView = UIView()
         
         
         
         
-        self.initializeAuxVariables()
-        self.initializeTShirtsView()
+        initializeAuxVariables()
+        initializeTShirtsView()
         
         
         
@@ -70,7 +70,7 @@ class TShirtsSpainViewController: UIViewController, UIScrollViewDelegate {
 
         scrollView.addSubview(containerView)
 
-        self.view.addSubview(scrollView)
+        view.addSubview(scrollView)
         
         
         

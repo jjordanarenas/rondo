@@ -19,6 +19,7 @@
 		EB1BE6961C21D53000B9CEF8 /* TestFirstDivision.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB1BE6951C21D53000B9CEF8 /* TestFirstDivision.plist */; };
 		EB1BE6981C21D54F00B9CEF8 /* LeaguesTest.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB1BE6971C21D54F00B9CEF8 /* LeaguesTest.plist */; };
 		EB1BE69C1C21D59600B9CEF8 /* Test2FirstDivision.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB1BE69B1C21D59600B9CEF8 /* Test2FirstDivision.plist */; };
+		EB3644141CC938510019379A /* ChooseTshirtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3644131CC938510019379A /* ChooseTshirtViewController.swift */; };
 		EB3808DA1BA33F62004CEA83 /* blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3808D81BA33F62004CEA83 /* blue@2x.png */; };
 		EB3808DB1BA33F62004CEA83 /* blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB3808D91BA33F62004CEA83 /* blue@3x.png */; };
 		EB47E9241BCDA60E005BAC87 /* fcbarcelona_main@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB47E9231BCDA60E005BAC87 /* fcbarcelona_main@2x.png */; };
@@ -41,6 +42,7 @@
 		EBE7A1901B9B63B30051AD04 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = EBE7A18F1B9B63B30051AD04 /* ball.png */; };
 		EBEAF0A51BAC827300141A2F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEAF0A41BAC827300141A2F /* StoreKit.framework */; };
 		EBEAF0A81BAC872800141A2F /* TShirtsMenuStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBEAF0A71BAC872800141A2F /* TShirtsMenuStoryboard.storyboard */; };
+		EBEBF4C91CEB617F007301FA /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEBF4C81CEB617F007301FA /* MainMenuScene.swift */; };
 		F88B648E7C9E405981E9FC9E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7627DB2AA805EB23EF9A9D35 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,7 @@
 		EB1BE6951C21D53000B9CEF8 /* TestFirstDivision.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestFirstDivision.plist; sourceTree = "<group>"; };
 		EB1BE6971C21D54F00B9CEF8 /* LeaguesTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LeaguesTest.plist; sourceTree = "<group>"; };
 		EB1BE69B1C21D59600B9CEF8 /* Test2FirstDivision.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Test2FirstDivision.plist; sourceTree = "<group>"; };
+		EB3644131CC938510019379A /* ChooseTshirtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseTshirtViewController.swift; sourceTree = "<group>"; };
 		EB3808D81BA33F62004CEA83 /* blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue@2x.png"; sourceTree = "<group>"; };
 		EB3808D91BA33F62004CEA83 /* blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue@3x.png"; sourceTree = "<group>"; };
 		EB47E9231BCDA60E005BAC87 /* fcbarcelona_main@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fcbarcelona_main@2x.png"; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 		EBE7A18F1B9B63B30051AD04 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
 		EBEAF0A41BAC827300141A2F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EBEAF0A71BAC872800141A2F /* TShirtsMenuStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TShirtsMenuStoryboard.storyboard; sourceTree = "<group>"; };
+		EBEBF4C81CEB617F007301FA /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 		EB044A5E1C0F480400392F07 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EBEBF4C71CEB615F007301FA /* Main Menu */,
 				EBE49B011C19E08900AFE0A7 /* Game */,
 				EBE49B001C19E08200AFE0A7 /* Menu */,
 				EB044A5F1C0F481000392F07 /* Tshirts */,
@@ -254,6 +259,7 @@
 				EBE4FACA1B976B85009BFAEB /* LaunchScreen.storyboard */,
 				EBE4FACD1B976B85009BFAEB /* Info.plist */,
 				EBEAF0A71BAC872800141A2F /* TShirtsMenuStoryboard.storyboard */,
+				EB3644131CC938510019379A /* ChooseTshirtViewController.swift */,
 				EBDA48101BADBA4300C510BA /* TShirtsSpainViewController.swift */,
 			);
 			path = Rondo;
@@ -293,6 +299,14 @@
 				EBE7A18B1B9A02C70051AD04 /* red.png */,
 			);
 			path = Art;
+			sourceTree = "<group>";
+		};
+		EBEBF4C71CEB615F007301FA /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				EBEBF4C81CEB617F007301FA /* MainMenuScene.swift */,
+			);
+			name = "Main Menu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +504,8 @@
 				EB044A6A1C0F4CE800392F07 /* TshirtContentViewController.swift in Sources */,
 				EBE4FAC21B976B85009BFAEB /* GameScene.swift in Sources */,
 				EB044A681C0F4C2800392F07 /* TshirtViewController.swift in Sources */,
+				EB3644141CC938510019379A /* ChooseTshirtViewController.swift in Sources */,
+				EBEBF4C91CEB617F007301FA /* MainMenuScene.swift in Sources */,
 				EBE4FAC41B976B85009BFAEB /* GameViewController.swift in Sources */,
 				EBE4FABE1B976B85009BFAEB /* AppDelegate.swift in Sources */,
 				EBDA48111BADBA4300C510BA /* TShirtsSpainViewController.swift in Sources */,

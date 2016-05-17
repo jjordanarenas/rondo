@@ -128,7 +128,8 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
     //let nonPlayableCharacterCategory1: UInt32 = 0x1 << 1
     //let nonPlayableCharacterCategory2: UInt32 = 0x1 << 2
 
-    
+    var chooseTshirtViewController: ChooseTshirtViewController!
+  
     private var bestNumberOfPasses: SKLabelNode!
     private var currentNumberOfPasses: SKLabelNode!
     
@@ -141,13 +142,18 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
     private var numOfGameWithAds: Int = 0
     private var currentNumOfGame: Int = 0
 
-    private var buyButtom:UIButton!
+    private var buyButton:UIButton!
     
     private var defaults: NSUserDefaults!
     
     override func didMoveToView(view: SKView) {
-        self.initializeGame()
-        self.preloadInterstitial()
+//      if is the first time
+     /* chooseTshirtViewController = ChooseTshirtViewController()
+      view.addSubview(chooseTshirtViewController.view)
+      */
+      
+        initializeGame()
+        preloadInterstitial()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -616,12 +622,12 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
     func initializeGame() {
         
         //isGameOver = false
-        self.getUserDefaults()
-        self.updateSpeeds()
+        getUserDefaults()
+        updateSpeeds()
         
         
         if !isGameStarted {
-            self.createRestartButton()
+            createRestartButton()
             //self.initializeLabels()
         }
         self.initializeLabels()
@@ -1035,14 +1041,13 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
     
     func createNoAdsButton() {
         if !defaults.boolForKey(k_user_default_no_ads) {
-            buyButtom = UIButton(frame: CGRectMake(100, 320, 200, 40))
-        
+            buyButton = UIButton(frame: CGRectMake(100, view!.bounds.height - 40, 200, 40))
             // TODO localice???
-            buyButtom.setTitle("No Ads", forState: UIControlState.Normal)
-            buyButtom.backgroundColor = UIColor(red: 0.0, green: 0.2, blue: 0.2, alpha: 1.0)
-            buyButtom.addTarget(self, action: "buyConsumableNoAds", forControlEvents: UIControlEvents.TouchUpInside)
+            buyButton.setTitle("No Ads", forState: UIControlState.Normal)
+            buyButton.backgroundColor = UIColor(red: 0.0, green: 0.2, blue: 0.2, alpha: 1.0)
+            buyButton.addTarget(self, action: "buyConsumableNoAds", forControlEvents: UIControlEvents.TouchUpInside)
         
-            self.view!.addSubview(buyButtom)
+            view!.addSubview(buyButton)
         }
     }
     
@@ -1100,12 +1105,12 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
                     print("Product Purchased");
                     defaults.setBool(true, forKey: k_user_default_no_ads)
                     isAdsDisabled = true
-                    buyButtom.removeFromSuperview()
+                    buyButton.removeFromSuperview()
                     SKPaymentQueue.defaultQueue().finishTransaction(transaction as! SKPaymentTransaction)
                     break;
                 case .Failed:
                     print("Purchased Failed");
-                    buyButtom.removeFromSuperview()
+                    buyButton.removeFromSuperview()
                     SKPaymentQueue.defaultQueue().finishTransaction(transaction as! SKPaymentTransaction)
                     break;
                     // case .Restored:
