@@ -25,6 +25,8 @@
 		EB47E9241BCDA60E005BAC87 /* fcbarcelona_main@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB47E9231BCDA60E005BAC87 /* fcbarcelona_main@2x.png */; };
 		EB4DEA741C972DC400C549D4 /* realmadrid.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4DEA731C972DC400C549D4 /* realmadrid.png */; };
 		EB4DEA761C972F4D00C549D4 /* valenciacf.png in Resources */ = {isa = PBXBuildFile; fileRef = EB4DEA751C972F4D00C549D4 /* valenciacf.png */; };
+		EB69B0A71CF4A71B00335DC0 /* soundOffOn.png in Resources */ = {isa = PBXBuildFile; fileRef = EB69B0A61CF4A71B00335DC0 /* soundOffOn.png */; };
+		EB69B0A91CF4ADB600335DC0 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB69B0A81CF4ADB600335DC0 /* MenuScene.swift */; };
 		EBDA48111BADBA4300C510BA /* TShirtsSpainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA48101BADBA4300C510BA /* TShirtsSpainViewController.swift */; };
 		EBDA48131BADE1E300C510BA /* fcbarcelona_main.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDA48121BADE1E300C510BA /* fcbarcelona_main.png */; };
 		EBE49B031C19E18A00AFE0A7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE49B021C19E18900AFE0A7 /* MenuViewController.swift */; };
@@ -85,6 +87,8 @@
 		EB47E9231BCDA60E005BAC87 /* fcbarcelona_main@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fcbarcelona_main@2x.png"; sourceTree = "<group>"; };
 		EB4DEA731C972DC400C549D4 /* realmadrid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realmadrid.png; sourceTree = "<group>"; };
 		EB4DEA751C972F4D00C549D4 /* valenciacf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valenciacf.png; sourceTree = "<group>"; };
+		EB69B0A61CF4A71B00335DC0 /* soundOffOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soundOffOn.png; sourceTree = "<group>"; };
+		EB69B0A81CF4ADB600335DC0 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		EBDA48101BADBA4300C510BA /* TShirtsSpainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TShirtsSpainViewController.swift; sourceTree = "<group>"; };
 		EBDA48121BADE1E300C510BA /* fcbarcelona_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fcbarcelona_main.png; sourceTree = "<group>"; };
 		EBE49B021C19E18900AFE0A7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				EBE49B021C19E18900AFE0A7 /* MenuViewController.swift */,
+				EB69B0A81CF4ADB600335DC0 /* MenuScene.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 		EBE7A18A1B9A02C70051AD04 /* Art */ = {
 			isa = PBXGroup;
 			children = (
+				EB69B0A61CF4A71B00335DC0 /* soundOffOn.png */,
 				EB4DEA751C972F4D00C549D4 /* valenciacf.png */,
 				EB4DEA731C972DC400C549D4 /* realmadrid.png */,
 				EB1BE6911C21D0A400B9CEF8 /* fcbarcelona.png */,
@@ -422,6 +428,7 @@
 			files = (
 				EBEAF0A81BAC872800141A2F /* TShirtsMenuStoryboard.storyboard in Resources */,
 				EB1BE69C1C21D59600B9CEF8 /* Test2FirstDivision.plist in Resources */,
+				EB69B0A71CF4A71B00335DC0 /* soundOffOn.png in Resources */,
 				EB4DEA741C972DC400C549D4 /* realmadrid.png in Resources */,
 				EB47E9241BCDA60E005BAC87 /* fcbarcelona_main@2x.png in Resources */,
 				EB3808DA1BA33F62004CEA83 /* blue@2x.png in Resources */,
@@ -502,6 +509,7 @@
 			files = (
 				EB044A6C1C0F582400392F07 /* TshirtViewModel.swift in Sources */,
 				EB044A6A1C0F4CE800392F07 /* TshirtContentViewController.swift in Sources */,
+				EB69B0A91CF4ADB600335DC0 /* MenuScene.swift in Sources */,
 				EBE4FAC21B976B85009BFAEB /* GameScene.swift in Sources */,
 				EB044A681C0F4C2800392F07 /* TshirtViewController.swift in Sources */,
 				EB3644141CC938510019379A /* ChooseTshirtViewController.swift in Sources */,

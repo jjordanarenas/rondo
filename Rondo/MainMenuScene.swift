@@ -19,8 +19,13 @@ class MainMenuScene: SKScene {
   }
   
   func initializeMenu() {
+    let background = SKSpriteNode(color: UIColor.orangeColor(), size: view!.frame.size)
+    background.position = CGPoint(x: CGRectGetMidX(view!.frame), y: CGRectGetMidY(view!.frame))
+    addChild(background)
     //initializeBackground()
     initializeButtons()
+    
+
   }
   
   func initializeBackground() {

@@ -49,12 +49,14 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
     private var k_nonPlayableCharacter2_name = "nonPlayableCharacter2"
     private var k_bestNumberOfPasses = "bestNumberOfPasses"
     private var k_user_default_no_ads = "user_default_no_ads"
+    private var k_user_default_passes_to_next_tshirt = "user_default_passes_to_next_tshirt"
     
     private var k_interstitial_id = "ca-app-pub-5767684210972160/3749421535"
     private var testingTeam = CPUTeam.CPU_SPAIN
     
     private var k_NUM_TEAMS: Int = 6
     private var k_MAX_RANDOM_VALUE: Int = 5
+  private var k_INITIAL_NEXT_TSHIRT_VALUE: Int = 100
     
     private var k_IPHONE6_WIDTH: CGFloat = 375
     private var k_IPHONE6PLUS_WIDTH: CGFloat = 414
@@ -121,7 +123,10 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
     private var isPlayer3Position: Bool = false
     private var isPlayer4Position: Bool = false
     private var isPlayer5Position: Bool = false
-    
+  
+  private var menuScene: MenuScene!
+  private var menuButton: SKSpriteNode!
+  
     var restartButton: SKNode! = nil
 
     //let ballCategory: UInt32 = 0x1 << 0
@@ -132,9 +137,12 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
   
     private var bestNumberOfPasses: SKLabelNode!
     private var currentNumberOfPasses: SKLabelNode!
+  private var passesToNextTshirtLabel: SKLabelNode!
     
     private var numberOfPasses: Int = 0
+    private var numberOfPassesInARow: Int = 0
     private var lastNumberOfPasses: Int = 0
+  private var passesToNextTshirt: Int = 0
     
     private var currentTeam: Int = 0
     
@@ -145,15 +153,19 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
     private var buyButton:UIButton!
     
     private var defaults: NSUserDefaults!
-    
+  
+  private var menu: SKSpriteNode!
+  
     override func didMoveToView(view: SKView) {
 //      if is the first time
      /* chooseTshirtViewController = ChooseTshirtViewController()
       view.addSubview(chooseTshirtViewController.view)
       */
+      scene?.paused = false
       
         initializeGame()
         preloadInterstitial()
+      initializeMenuButton()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -167,7 +179,14 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
         if !ball.hasActions() {
         for touch in touches {
             let location = touch.locationInNode(self)
-            
+          
+          if scene!.paused {
+            hideMenu()
+          }
+          if nodeAtPoint(location).name == "showMenu" {
+            showMenu()
+           break
+          }
                 if ball.hasActions() {
                    print("HAS ACTIONS")
                 }
@@ -184,7 +203,13 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
                 let checkPassHappened = SKAction.runBlock {
                     if self.distanceBetween(point: self.ball.position, andPoint: self.initialBallPosition1) < self.ball.size.width / 2 {
                         self.numberOfPasses++
+                        self.numberOfPassesInARow++
+                      if self.passesToNextTshirt > 0 {
+                        self.passesToNextTshirt--
+                      }
                         self.updateNumberOfPassesLabel()
+                      self.updateBestNumberOfPassesLabel()
+                      self.updateNextTshirtInLabel()
                     }
                 }
                 
@@ -212,7 +237,13 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
                     //if self.ball.position == self.initialBallPosition2 {
                     if self.distanceBetween(point: self.ball.position, andPoint: self.initialBallPosition2) < self.ball.size.width / 2 {
                     self.numberOfPasses++
+                      self.numberOfPassesInARow++
+                      if self.passesToNextTshirt > 0 {
+                        self.passesToNextTshirt--
+                      }
                         self.updateNumberOfPassesLabel()
+                      self.updateBestNumberOfPassesLabel()
+                      self.updateNextTshirtInLabel()
                     }
                 }
                 
@@ -240,7 +271,13 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
                     //if self.ball.position == self.initialBallPosition3 {
                     if self.distanceBetween(point: self.ball.position, andPoint: self.initialBallPosition3) < self.ball.size.width / 2 {
                     self.numberOfPasses++
+                      self.numberOfPassesInARow++
+                      if self.passesToNextTshirt > 0 {
+                        self.passesToNextTshirt--
+                      }
                         self.updateNumberOfPassesLabel()
+                      self.updateBestNumberOfPassesLabel()
+                      self.updateNextTshirtInLabel()
                     }
                 }
                 
@@ -267,7 +304,13 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
                     //if self.ball.position == self.initialBallPosition4 {
                     if self.distanceBetween(point: self.ball.position, andPoint: self.initialBallPosition4) < self.ball.size.width / 2 {
                     self.numberOfPasses++
+                      self.numberOfPassesInARow++
+                      if self.passesToNextTshirt > 0 {
+                        self.passesToNextTshirt--
+                      }
                         self.updateNumberOfPassesLabel()
+                      self.updateBestNumberOfPassesLabel()
+                      self.updateNextTshirtInLabel()
                     }
                 }
                 
@@ -293,7 +336,13 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
                     //if self.ball.position == self.initialBallPosition5 {
                     if self.distanceBetween(point: self.ball.position, andPoint: self.initialBallPosition5) < self.ball.size.width / 2 {
                     self.numberOfPasses++
+                      self.numberOfPassesInARow++
+                      if self.passesToNextTshirt > 0 {
+                        self.passesToNextTshirt--
+                      }
                         self.updateNumberOfPassesLabel()
+                      self.updateBestNumberOfPassesLabel()
+                      self.updateNextTshirtInLabel()
                     }
                 }
                 
@@ -630,14 +679,14 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
             createRestartButton()
             //self.initializeLabels()
         }
-        self.initializeLabels()
+        initializeLabels()
         
         
                 isTouchable = true
         
-        self.initializeCollisionDetection()
-        self.initializeDistances()
-        self.initializeBall()
+        initializeCollisionDetection()
+        initializeDistances()
+        initializeBall()
         self.initializePlayableCharacters()
         self.initializeNonPlayableCharacters()
         self.createNoAdsButton()
@@ -662,7 +711,7 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
         interstitial!.delegate = self
         let request = GADRequest()
         // Requests test ads on test devices.
-        request.testDevices = ["16ed9ee524b9056589e1572af4a90966"]// kGADSimulatorID
+        request.testDevices = ["16ed9ee524b9056589e1572af4a90966", kGADSimulatorID]
         interstitial!.loadRequest(request)
     }
     
@@ -705,10 +754,22 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
         currentNumberOfPasses = SKLabelNode(fontNamed:"Arial")
         currentNumberOfPasses.text = "Passes: \(numberOfPasses)";
         currentNumberOfPasses.fontSize = 30;
-        currentNumberOfPasses.position = CGPoint(x:(view!.bounds.size.width - 120), y:(view!.bounds.size.height - 60));
-        
-        self.addChild(bestNumberOfPasses)
-        self.addChild(currentNumberOfPasses)
+        currentNumberOfPasses.position = CGPoint(x:(view!.bounds.size.width - 120), y:(view!.bounds.size.height - 60))
+      
+      if record > 0 {
+        passesToNextTshirt = defaults.integerForKey(k_user_default_passes_to_next_tshirt)
+      } else {
+        passesToNextTshirt = k_INITIAL_NEXT_TSHIRT_VALUE
+      }
+      
+      passesToNextTshirtLabel = SKLabelNode(fontNamed:"Arial")
+      passesToNextTshirtLabel.text = "Passes to next t-shirt: \(passesToNextTshirt)"
+      passesToNextTshirtLabel.fontSize = 30
+      passesToNextTshirtLabel.position = CGPoint(x:(60), y:(bestNumberOfPasses.position.y - 60))
+      
+      addChild(passesToNextTshirtLabel)
+        addChild(bestNumberOfPasses)
+        addChild(currentNumberOfPasses)
 
     }
     
@@ -738,10 +799,13 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
         if defaults != nil && numberOfPasses > defaults.integerForKey(k_bestNumberOfPasses) {
             // Get level info from user defaults
             defaults.setInteger(numberOfPasses, forKey: k_bestNumberOfPasses)
-            self.updateBestNumberOfPassesLabel()
+            updateBestNumberOfPassesLabel()
         }
+      
+      
+      
         numberOfPasses = 0
-        
+      
         // Update number of passes
         
         isGameOver = true
@@ -764,16 +828,16 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
                 ball.removeFromParent()
        
         bestNumberOfPasses.removeFromParent()
+      passesToNextTshirtLabel.removeFromParent()
                 currentNumberOfPasses.removeFromParent()
         
         
         currentNumOfGame++
         
-        self.showGameOverMenu()
+        showGameOverMenu()
         
-        
-       // if numOfGameWithAds == currentNumOfGame {
-            // TODO trigger ads
+      
+            // TODO trigger correct ads
             if (!isAdsDisabled && interstitial!.isReady && Int(arc4random_uniform(UInt32(k_MAX_RANDOM_VALUE))) == K_RANDOM_VALUE_FOR_ADS) {
                 interstitial!.presentFromRootViewController(viewController)
             } else if isAdsDisabled {
@@ -783,12 +847,18 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
             } else if Int(arc4random_uniform(UInt32(k_MAX_RANDOM_VALUE))) != K_RANDOM_VALUE_FOR_ADS {
                 print("Random value not matching")
             }
-        //}
+      
         
+        if passesToNextTshirt <= 0 {
+      // new (or a repeated one) tshirt unlocked
+      passesToNextTshirt = k_INITIAL_NEXT_TSHIRT_VALUE
+      
         
-        
-        
-        
+      }
+      
+      updateNextTshirtInLabel()
+      defaults.setInteger(passesToNextTshirt, forKey: k_user_default_passes_to_next_tshirt)
+      
         ///////////////????
         initializeGame()
     }
@@ -802,14 +872,18 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
     }
     
     func updateNumberOfPassesLabel() {
-        currentNumberOfPasses.text = "Passes: \(numberOfPasses)";
+        currentNumberOfPasses.text = "Passes: \(numberOfPasses)"
     }
     
     func updateBestNumberOfPassesLabel() {
-        bestNumberOfPasses.text = "Best: \(defaults.integerForKey(k_bestNumberOfPasses))";
+        bestNumberOfPasses.text = "Best: \(defaults.integerForKey(k_bestNumberOfPasses))"
     }
+  
+  func updateNextTshirtInLabel() {
     
-    
+    passesToNextTshirtLabel.text = "Passes to next t-shirt: \(passesToNextTshirt)"
+  }
+  
     func checkPassCut() {
         
         let distance1 = self.distanceBetween(point: ball.position, andPoint: nonPlayableCharacter1.position)
@@ -823,7 +897,7 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
             ) {
                 
                 
-                self.gameOver()
+                gameOver()
         }
     }
     
@@ -1010,17 +1084,41 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
         if isGameStarted && !isGameOver {
             switch numOfPlayableCharacters {
                 case 5:
-                    
-                    if !nonPlayableCharacter1.hasActions() && !nonPlayableCharacter2.hasActions() {
-                        currentTeam = Int(arc4random_uniform(UInt32(k_NUM_TEAMS)))
+                  if numberOfPasses < 15 {
+                    if numberOfPassesInARow < 5 {
+                      randomCPUTeam()
+                    } else {
+                      currentTeam = CPUTeam.CPU_NIGERIA.rawValue
+                      numberOfPassesInARow = 0
                     }
+                  } else if numberOfPasses >= 15 && numberOfPasses < 25 {
+                    if numberOfPassesInARow < 3 {
+                      randomCPUTeam()
+                    } else {
+                      currentTeam = CPUTeam.CPU_NIGERIA.rawValue
+                      numberOfPassesInARow = 0
+                    }
+                  } else if numberOfPasses >= 25 && numberOfPasses < 35 {
+                    if numberOfPassesInARow < 2 {
+                      randomCPUTeam()
+                    } else {
+                      currentTeam = CPUTeam.CPU_NIGERIA.rawValue
+                      numberOfPassesInARow = 0
+                    }
+                  } else {
+                    currentTeam = CPUTeam.CPU_NIGERIA.rawValue
+                  }
+
+                  
                     
-                    
+                    print ("current team \(currentTeam)")
                     //self.runDefensiveStrategyForTeam(testingTeam)
-                    self.runDefensiveStrategyForTeam(CPUTeam(value: currentTeam))
+                    runDefensiveStrategyForTeam(CPUTeam(value: currentTeam))
                     
-                    
-                
+                    //} else {
+             //currentTeam = CPUTeam.CPU_NIGERIA.rawValue
+          //}
+      
                 default:
                     print("default")
             }
@@ -1030,7 +1128,15 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
             
         }
     }
-    
+  
+  func randomCPUTeam() {
+    //if currentTeam != CPUTeam.CPU_NIGERIA.rawValue && !nonPlayableCharacter1.hasActions() && !nonPlayableCharacter2.hasActions() {
+    if !nonPlayableCharacter1.hasActions() && !nonPlayableCharacter2.hasActions() {
+      currentTeam = Int(arc4random_uniform(UInt32(k_NUM_TEAMS)))
+
+    }
+  }
+  
    /* func initializingProductsRequest() {
         //var productID:NSSet = NSSet(object: "no_ads")
         var productID: NSSet = NSSet(object: "com.insaneplatypusgames.Rondo")
@@ -1047,7 +1153,7 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
             buyButton.backgroundColor = UIColor(red: 0.0, green: 0.2, blue: 0.2, alpha: 1.0)
             buyButton.addTarget(self, action: "buyConsumableNoAds", forControlEvents: UIControlEvents.TouchUpInside)
         
-            view!.addSubview(buyButton)
+            //////view!.addSubview(buyButton)
         }
     }
     
@@ -1122,4 +1228,45 @@ class GameScene: SKScene, SKProductsRequestDelegate, GADInterstitialDelegate {
         }
     }
 
+  func initializeMenuButton() {
+    // Initialize UIButton
+    menuButton = SKSpriteNode(imageNamed: "soundOffOn")
+    menuButton.size = CGSizeMake(nonPlayableCharacter1.frame.width, nonPlayableCharacter1.frame.width)
+    menuButton.position = CGPointMake(view!.bounds.size.width - nonPlayableCharacter1.frame.width, nonPlayableCharacter1.frame.width)
+//    (frame: CGRectMake(view!.bounds.size.width - nonPlayableCharacter1.frame.width, view!.bounds.size.height - nonPlayableCharacter1.frame.width, nonPlayableCharacter1.frame.width, nonPlayableCharacter1.frame.width))
+    // Set image to button
+    //menuButton.setImage(UIImage(named: "soundOffOn"), forState: UIControlState.Normal)
+    // Specify function to trigger
+    
+    menuButton.name = "showMenu"
+//    menuButton.addTarget(self, action: "showMenu", forControlEvents: UIControlEvents.TouchUpInside)
+    // Add button to view
+    addChild(menuButton)
+  }
+  
+  func showMenu() {
+    scene?.paused = true
+    menu = SKSpriteNode(color: UIColor.orangeColor(), size: CGSizeMake(view!.frame.width/2, view!.frame.height/3))
+    menu.position = CGPoint(x: CGRectGetMidX(view!.frame), y: CGRectGetMidY(view!.frame))
+    menu.zPosition = 100
+    addChild(menu)
+    
+  }
+  
+  func hideMenu() {
+    
+  }
+  
+  /*func showMenu() {
+    scene?.paused = true
+    let transition = SKTransition.revealWithDirection(.Up, duration: 1.0)
+    menuScene = MenuScene(size:  CGSizeMake(50, 50))
+    scene!.view?.presentScene(menuScene, transition: transition)
+  }
+  
+  func hideMenu() {
+    
+    let transition = SKTransition.revealWithDirection(.Down, duration: 1.0)
+    scene!.view?.presentScene(menuScene, transition: transition)
+  }*/
 }
